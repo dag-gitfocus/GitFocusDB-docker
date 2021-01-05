@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "postgres_gitfocus.fullname" . }}
+  name: {{ include "gitfocus-postgres.fullname" . }}
   labels:
-    {{- include "postgres_gitfocus.labels" . | nindent 4 }}
+    {{- include "gitfocus-postgres.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "postgres_gitfocus.fullname" . }}
+    name: {{ include "gitfocus-postgres.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:
