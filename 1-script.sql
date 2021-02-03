@@ -1,4 +1,4 @@
-update public.realm set ssl_required='NONE' where id = 'master';
+--update public.realm set ssl_required='NONE' where id = 'master';
 
 CREATE SCHEMA gitfocus;
 
