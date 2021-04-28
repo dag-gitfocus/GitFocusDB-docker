@@ -87,7 +87,17 @@ INSERT INTO gitfocus.team_members VALUES (12345, 'jeyasekar');
 INSERT INTO gitfocus.team_members VALUES (23456, 'jeyasekar');
 INSERT INTO gitfocus.team_members VALUES (23456, 'dagdashboard');
 INSERT INTO gitfocus.team_members VALUES (23456, 'sruthi-27');
-INSERT INTO gitfocus.team_members VALUES (12345, 'sruthi-27');
+INSERT INTO gitfocus.team_members VALUES (12345, 'Mark');
+INSERT INTO gitfocus.team_members VALUES (12345, 'Mike');
+INSERT INTO gitfocus.team_members VALUES (12345, 'John');
+INSERT INTO gitfocus.team_members VALUES (12345, 'Sara');
+INSERT INTO gitfocus.team_members VALUES (12345, 'Lori');
+INSERT INTO gitfocus.team_members VALUES (23456, 'Mark');
+INSERT INTO gitfocus.team_members VALUES (23456, 'Mike');
+INSERT INTO gitfocus.team_members VALUES (23456, 'John');
+INSERT INTO gitfocus.team_members VALUES (23456, 'Sara');
+INSERT INTO gitfocus.team_members VALUES (23456, 'Lori');
+
 
 ALTER TABLE ONLY gitfocus.team_members
     ADD CONSTRAINT pk_team_members PRIMARY KEY (team_id, members);
@@ -2959,6 +2969,18 @@ INSERT INTO gitfocus.commit_details VALUES (1001, 'af900e93aae002f1be73211fdcae8
 
 master to sprint 5', 'src/app/TRDataPull/trdata-pull.service.ts,src/app/global/Escalation/creat-escalation/creat-escalation.component.ts,src/app/global/action-item/create-action-item/create-action-item.component.html,src/app/global/action-item/create-action-item/create-action-item.component.ts,src/app/global/appreciation/appreciation-create/appreciation-create.component.ts,src/app/global/feedback/create-feedback/create-feedback.component.html,src/app/global/feedback/create-feedback/create-feedback.component.ts,src/app/global/feedback/edit-feedback/edit-feedback.component.html,src/app/global/risk/create-risk/create-risk.component.ts,', 'modified,modified,modified,modified,modified,modified,modified,modified,modified,', '10,2,11,2,2,3,2,2,2,', '0,2,11,2,2,3,2,2,2,');
 
+INSERT INTO gitfocus.commit_details VALUES (1001, '7451e58ef8d88b21716c97dc01f557b938dc148b', 228623453, 'sprint7_code_cleanup', '2021-03-16 20:44:34', 'Clara', 'Query changes', 'src/main/java/com/tr/controller/TRController.java,src/main/java/com/tr/repository/JiraItemRepository.java,src/main/java/com/tr/service/TrDataService.java,', 'modified,modified,modified,', '2,19,32,', '2,4,13,');
+INSERT INTO gitfocus.commit_details VALUES (1001, 'be710a9d3ec49477054100d4c758d48d95f874a2', 228623453, 'sprint5', '2021-03-15 11:28:49', 'John', 'modified query builder in action item', 'src/main/java/com/tr/service/ActionItemImplService.java,', 'modified,', '3,', '3,');
+INSERT INTO gitfocus.commit_details VALUES (1001, '63cee4190226a2d044f2338211f2ba3b6f6f58eg', 228623453, 'sprint5', '2021-03-15 17:16:55', 'John', 'Update Query', 'Query,', 'modified,', '0,', '18,');
+INSERT INTO gitfocus.commit_details VALUES (1001, '98d957d1b0399da9ae7bf30eb656a4fc3bdd94d5', 228623453, 'sprint5', '2021-03-15 15:31:05', 'John', 'Update Query', 'Query,', 'modified,', '1,', '1,');
+INSERT INTO gitfocus.commit_details VALUES (1001, 'dabb1621d1c381c413f4a7102f9650add0170db7', 228623453, 'sprint7_code_cleanup', '2021-03-16 12:52:24', 'Clara', 'Update JiraItemRepository.java', 'src/main/java/com/tr/repository/JiraItemRepository.java,', 'modified,', '2,', '1,');
+
+INSERT INTO gitfocus.commit_details VALUES (1001, 'e2c0a66bc15ef6385bdc3a3076e904adbd826a27', 228623453, 'sprint7_code_cleanup', '2021-03-16 16:58:44', 'Clara', 'Update ScheduledTasks.java', 'src/main/java/com/tr/dashboard/ScheduledTasks.java,', 'modified,', '68,', '55,');
+INSERT INTO gitfocus.commit_details VALUES (1001, 'a0341b07313917837812be099b65004a6950730d', 228623453, 'sprint6_bu_charts', '2021-03-12 10:41:17', 'Mike', 'Update TrDataService.java', 'src/main/java/com/tr/service/TrDataService.java,', 'modified,', '2,', '2,');
+INSERT INTO gitfocus.commit_details VALUES (1001, '1fe3e0ce1a0bbe9c45a702999c045a8b346af779', 228623453, 'sprint6_bu_charts', '2021-03-14 11:20:51', 'Mike', 'Merge branch ''sprint7_code_cleanup'' of https://github.com/dagdashboard/TRDashboardService_NormalizedDB into sprint7_code_cleanup', 'src/main/java/com/tr/repository/JiraItemRepository.java,', 'modified,', '1,', '1,');
+INSERT INTO gitfocus.commit_details VALUES (1001, '42068bcf1aaf78ec5ed68abdcb12097564f621e4', 228623453, 'sprint6_bu_charts', '2021-03-14 16:50:55', 'Mike', 'Effort  Metrics', 'src/main/java/com/tr/controller/TRController.java,src/main/java/com/tr/repository/JiraItemRepository.java,src/main/java/com/tr/service/TrDataService.java,', 'modified,modified,modified,', '5,5,39,', '6,0,1,');
+INSERT INTO gitfocus.commit_details VALUES (1001, '1774c02ea95232a5573a8265942e629d6162e029', 228623453, 'sprint6_bu_charts', '2021-03-17 11:42:57', 'Mike', 'Asset Data UI Changes', 'src/main/java/com/tr/repository/JiraItemRepository.java,src/main/java/com/tr/service/TrDataService.java,', 'modified,modified,', '1,12,', '1,8,');
+
 
 ALTER TABLE ONLY gitfocus.commit_details
     ADD CONSTRAINT "PK_COMMIT_ID" PRIMARY KEY (unit_id, sha_id, repo_id, branch_name);
@@ -3056,6 +3078,11 @@ INSERT INTO gitfocus.pull_master VALUES (1001, 228830374, 370226858, 3, 'sprint5
 INSERT INTO gitfocus.pull_master VALUES (1001, 228830374, 369631208, 2, 'sprint5', 'master', '2020-01-31 20:49:30', 'closed', 5, 'jeyasekar', '2020-01-31 20:51:55', true, 'jeyasekar', '2020-01-31 20:51:55', '2020-01-31 20:51:55');
 INSERT INTO gitfocus.pull_master VALUES (1001, 228830374, 369060445, 1, 'sprint5', 'master', '2020-01-30 18:29:24', 'closed', 2, 'jeyasekar', '2020-01-30 18:34:25', true, 'jeyasekar', '2020-01-30 18:34:25', '2020-01-30 18:34:25');
 INSERT INTO gitfocus.pull_master VALUES (1001, 228830374, 403743796, 13, 'sprint7_code_cleanup', 'master', '2020-04-15 18:28:19', 'open', 217, 'jeyasekar', '2020-05-18 14:13:03', false, 'null', '2020-01-30 18:34:25', NULL);
+
+INSERT INTO gitfocus.pull_master VALUES (1001, 228623453, 369060446, 16, 'sprint5', 'master', '2021-03-19 18:29:24', 'closed', 3, 'John', '2021-03-19 20:29:24', true, 'Mark', '2021-03-19 20:29:24', '2021-03-19 20:29:24');
+INSERT INTO gitfocus.pull_master VALUES (1001, 228623453, 369060447, 17, 'sprint6_bu_charts', 'master', '2021-03-18 23:29:24', 'closed', 4, 'Mike', '2021-03-20 06:29:24', true, 'Mark', '2021-03-20 06:29:24', '2021-03-20 06:29:24');
+INSERT INTO gitfocus.pull_master VALUES (1001, 228623453, 369060447, 18, 'sprint7_code_cleanup', 'master', '2021-03-18 22:00:24', 'closed', 3, 'Mike', '2021-03-20 07:29:24', true, 'Mark', '2021-03-20 07:29:24', '2021-03-20 07:29:24');
+
 
 
 
@@ -4313,6 +4340,17 @@ INSERT INTO gitfocus.pull_commit VALUES (1001, 228830374, 13, '79635a29c6759175d
 INSERT INTO gitfocus.pull_commit VALUES (1001, 228830374, 13, '7cb2041059feb1597282c7bdb7ce68f49007d407', 'sprint7_code_cleanup');
 INSERT INTO gitfocus.pull_commit VALUES (1001, 228830374, 13, '5d15f0d16f20c0e25fe94957a26637a55a6ad988', 'sprint7_code_cleanup');
 
+INSERT INTO gitfocus.pull_commit VALUES (1001, 228623453, 16, 'be710a9d3ec49477054100d4c758d48d95f874a2', 'sprint5');
+INSERT INTO gitfocus.pull_commit VALUES (1001, 228623453, 16, '63cee4190226a2d044f2338211f2ba3b6f6f58eg', 'sprint5');
+INSERT INTO gitfocus.pull_commit VALUES (1001, 228623453, 16, '98d957d1b0399da9ae7bf30eb656a4fc3bdd94d5', 'sprint5');
+INSERT INTO gitfocus.pull_commit VALUES (1001, 228623453, 17, 'a0341b07313917837812be099b65004a6950730d', 'sprint6_bu_charts');
+INSERT INTO gitfocus.pull_commit VALUES (1001, 228623453, 17, '1fe3e0ce1a0bbe9c45a702999c045a8b346af779', 'sprint6_bu_charts');
+INSERT INTO gitfocus.pull_commit VALUES (1001, 228623453, 17, '42068bcf1aaf78ec5ed68abdcb12097564f621e4', 'sprint6_bu_charts');
+INSERT INTO gitfocus.pull_commit VALUES (1001, 228623453, 17, '1774c02ea95232a5573a8265942e629d6162e029', 'sprint6_bu_charts');
+INSERT INTO gitfocus.pull_commit VALUES (1001, 228623453, 18, '7451e58ef8d88b21716c97dc01f557b938dc148b', 'sprint7_code_cleanup');
+INSERT INTO gitfocus.pull_commit VALUES (1001, 228623453, 18, 'e2c0a66bc15ef6385bdc3a3076e904adbd826a27', 'sprint7_code_cleanup');
+INSERT INTO gitfocus.pull_commit VALUES (1001, 228623453, 18, 'dabb1621d1c381c413f4a7102f9650add0170db7', 'sprint7_code_cleanup');
+
 
 ALTER TABLE ONLY gitfocus.pull_commit
     ADD CONSTRAINT "PK_PULL_COMMIT" PRIMARY KEY (repo_id, pull_number, commit_id, branch_name);
@@ -4338,6 +4376,9 @@ CREATE TABLE gitfocus.review_details (
 INSERT INTO gitfocus.review_details VALUES (1001, 228623453, 14, 364682696, 'jeyasekar', 'Verified by Jey', 'COMMENTED', '2020-02-26 13:28:53', '960067d64f4cd8138399c6054fb626ab2988f2e7');
 INSERT INTO gitfocus.review_details VALUES (1001, 228623453, 14, 8025569, 'jeyasekar', 'Changes Requested by Jey', 'CHANGES_REQUESTED', '2020-02-26 15:30:53', '960067d64f4cd8138399c6054fb626ab2988f2e7');
 INSERT INTO gitfocus.review_details VALUES (1001, 228623453, 14, 10609578, 'jeyasekar', 'Changes need to be done', 'CHANGES_REQUESTED', '2020-02-26 20:30:02', '960067d64f4cd8138399c6054fb626ab2988f2e7');
+INSERT INTO gitfocus.review_details VALUES (1001, 228623453, 16, 364682697, 'Mark', 'Verified by Mark', 'COMMENTED', '2021-03-19 15:00:24', 'be710a9d3ec49477054100d4c758d48d95f874a2');
+INSERT INTO gitfocus.review_details VALUES (1001, 228623453, 16, 8025570, 'Mark', 'Changes Requested by Mark', 'CHANGES_REQUESTED', '2021-03-19 15:30:53', 'be710a9d3ec49477054100d4c758d48d95f874a2');
+INSERT INTO gitfocus.review_details VALUES (1001, 228623453, 16, 10609579, 'Mark', 'Changes need to be done', 'CHANGES_REQUESTED', '2021-03-19 20:29:24', 'be710a9d3ec49477054100d4c758d48d95f874a2');
 
 
 
